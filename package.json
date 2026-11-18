@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "tsx server.ts",
     "build:server": "echo 'Vercel serverless function runs directly via api/index.ts'",
-    "build": "vite build && node scripts/prepare-pages.cjs",
+    "build": "tsc",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "start": "node server.ts",
+    "start": "node dist/server.js",
     "preview": "vite preview",
     "clean": "rm -rf dist docs server.js api/index.js",
     "lint": "tsc --noEmit"
